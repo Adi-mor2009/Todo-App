@@ -1,0 +1,8 @@
+.c-active-task {
+    margin: 5px;
+    padding:20px;
+}
+
+.c-active-task .list-group-item-action {
+    text-align: left;
+}
