@@ -1,0 +1,28 @@
+.c-task {
+    margin: 5px;
+    padding:20px;
+}
+
+.c-task .list-group-item-action {
+    text-align: left;
+    display: inline-flex;
+}
+
+.c-complited-task .form-check-label {
+    text-decoration: line-through;
+    color: lightgray;
+}
+
+.c-active-task .form-check-label {
+    text-decoration: none;
+    color: black;
+}
+
+.c-task .btn {
+    padding: 0;
+    margin-left: auto;
+}
+
+.c-task .hide {
+    visibility: hidden;
+}

@@ -1,0 +1,28 @@
+.p-todo{
+    font-family: 'Oswald', sans-serif;
+    /* background-image: url(./vector-set-pen-pencil_60352-744.png); */
+    /* background-image: linear-gradient(white,rgb(173, 226, 189),rgb(120,200,200),white); */
+    
+}
+.p-todo .header-todo{
+    text-align: center;
+    margin: 20px;
+    font-size: 3em;
+}
+.p-todo .nav-filter{
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.p-todo .nav-filter.marked{
+    color: black;
+    font-weight: bold;
+    background-color: transparent;
+    outline: none;
+}
+
+.p-todo .hide {
+    visibility: hidden;
+}
