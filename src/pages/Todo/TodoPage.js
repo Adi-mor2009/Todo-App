@@ -73,7 +73,7 @@ function Todo() {
     }
     return (
         <div className="p-todo">
-            <Container>
+            <Container >
                 <h1 className="display-1">Todos</h1>
                 <TaskBox placeholder="Add task ... (to finish press enter)" onEnter={handleEnterPressed} taskText={text} onTextChange={handleTextChange}></TaskBox>
                 <Tasks tasks={getTasks()} onTaskRemove={removeTask} onTaskSelected={markTaskAsComplited}></Tasks>
@@ -82,9 +82,9 @@ function Todo() {
             <Navbar className={tasks.length == 0 ? "hide" : ""}>
                 <Navbar.Brand>{getNumOfActiveTasks()} items left</Navbar.Brand>
                 <Navbar.Collapse className="justify-content-end">
-                    <Navbar.Brand className={show === "All" ? "nav-filter marked" : "nav-filter"} onClick={() => setShow("All")}>All</Navbar.Brand>
-                    <Navbar.Brand className={show === "Active" ? "nav-filter marked" : "nav-filter"} onClick={() => setShow("Active")}>Active</Navbar.Brand>
-                    <Navbar.Brand className={show === "Complite" ? "nav-filter marked" : "nav-filter"} onClick={() => setShow("Complite")}>Complite</Navbar.Brand>
+                    <Navbar.Text className={show === "All" ? "nav-filter marked" : "nav-filter"} onClick={() => setShow("All")}>All</Navbar.Text>
+                    <Navbar.Text className={show === "Active" ? "nav-filter marked" : "nav-filter"} onClick={() => setShow("Active")}>Active</Navbar.Text>
+                    <Navbar.Text className={show === "Complite" ? "nav-filter marked" : "nav-filter"} onClick={() => setShow("Complite")}>Complite</Navbar.Text>
                 </Navbar.Collapse>
             </Navbar>
         </div>

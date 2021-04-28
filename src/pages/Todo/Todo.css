@@ -2,6 +2,7 @@
     font-family: 'Oswald', sans-serif;
     /* background-image: url(./vector-set-pen-pencil_60352-744.png); */
     /* background-image: linear-gradient(white,rgb(173, 226, 189),rgb(120,200,200),white); */
+    background-image: linear-gradient(white,rgb(75, 176, 216), rgb(72, 25, 241),white);
     
 }
 .p-todo .header-todo{
