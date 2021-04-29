@@ -6,7 +6,7 @@ import './TaskBox.css'
 function TaskBox({placeholder, onEnter, taskText, onTextChange}) {
     return (
         <Container className="c-taskbox">
-            <Form.Control type="text" placeholder={placeholder} value={taskText} onChange = {e => onTextChange(e.target.value)}
+            <Form.Control type="text" minlength="5" placeholder={placeholder} value={taskText} onChange = {e => onTextChange(e.target.value)}
                 onKeyPress={e => e.key === 'Enter' ? onEnter(e.target.value) : null}/>
         </Container>
     );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Tasks from "../../components/Tasks/Tasks";
 import './Todo.css';
 const { Container, Modal, Button, Navbar, Row } = require("react-bootstrap");
@@ -8,6 +8,14 @@ function Todo() {
     const [tasks, setTasks] = React.useState([]); //[{ text: newTask, status: true }, { text: newTask, status: false }...]
     const [text, setText] = React.useState("");//Of tasks Component
     const [show, setShow] = React.useState("All");
+    useEffect(() => {
+        const fromStorage = JSON.parse(localStorage.getItem('tasks'));
+        fromStorage ? setTasks(fromStorage) : console.log("No data in local storage");
+    }, []);
+    useEffect(() => {
+        localStorage.removeItem('tasks');
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    }, [tasks]);
     function handleEnterPressed(newTask) {
         setTasks(tasks => tasks.concat({ text: newTask, status: true }))
         setText("");
@@ -28,8 +36,6 @@ function Todo() {
             }
         });
         setTasks(newArr);
-        // SetComplitedTasks(complitedTasks => [...complitedTasks, tasks[index]]);
-        // setTasks(tasks => tasks.slice(0, index).concat(tasks.slice(index + 1, tasks.length)));
     }
     function removeTask(index) {
         if (tasks[index].status) {
